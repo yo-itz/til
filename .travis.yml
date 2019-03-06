@@ -7,7 +7,7 @@ install: bundle install
 cache:
   directories: vendor/bundle
 script:
-  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bundle exec ruby deploy/deploy.rb; fi'
+  - if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bundle exec ruby deploy/deploy.rb; fi
 env:
   global:
     secure: V58izC2yi2vvxxjAHWELlydDJ3GyVYWvNDvy7CIo4pQ8xAemKqJTDw4EMjV9P/9A4dneRuq2LUQaUFWaakfVXAO842Z8t/y2XIkZEWRwh36XoC8VJgj5wWYKTXq0r4UjLds+x0qs/iROY0Wokc/70fQVCJalVsCrfRLEv++hlPMyIm57wlc7iM9ZqGvd99JJoS/Ooxg1W7AEmMZtIz6XSRdDN4nuB6h8eJTtpqsLbftucFrGoszLZV+LMsLAaQSK3y8HTLGFwL62Oi1Cy1WSez94h1WeRwYZdFLpisfIQJY5pa6BZny45wFfDh+QYi46526HW2iPTTJ7EPnUeMn3frh0aMkk4jKlek+2/AqOezpgyWPOGc3/XgSTpu/3YE6RX+Et2Zz5DP7JUiQc8aktRwdTCQ3db5tv4mLqY9bdI7+6k6VBYTrRHrjl72I4aSMBgf1w+HPDhkHeprkJ87K7Earc7P3qGhAHah5N0UMqr7J1L+MrDyTdCLLko6e7lJKLNWmBYw73OvTr5RgHNvKhuFO9kp//eUz8u+Bwzb5lXHUNlKcqn+Hx8jpXMYDQkzhFeDkbbl997DAZDKDcxpSPN0KUpm/EU68IqfO5PYt1d0wpwf2olS3HWRAlEy84kiWYMRrZaMbzyB2B7X9tUWwskPKMUuXW27Gcb+gyR2vGQas=
